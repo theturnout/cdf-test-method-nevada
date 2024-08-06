@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:vri="http://itl.nist.gov/ns/voting/1500-102/v1" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://itl.nist.gov/ns/voting/1500-102/v1" elementFormDefault="qualified" attributeFormDefault="unqualified">
-	<xs:redefine schemaLocation="file:///C:/Users/John/Documents/GitHub/cdf-test-method/catalog_documents/NIST_V0_voter_records_interchange.xsd">
+	<xs:redefine schemaLocation="http://itl.nist.gov/ns/voting/1500-102/v1">
 		<xs:complexType name="ContactMethod">
 			<xs:complexContent>
 				<xs:restriction base="vri:ContactMethod">
