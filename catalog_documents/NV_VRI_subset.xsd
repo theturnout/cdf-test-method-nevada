@@ -1,0 +1,593 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:vri="http://itl.nist.gov/ns/voting/1500-102/v1" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://itl.nist.gov/ns/voting/1500-102/v1" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:redefine schemaLocation="file:///C:/Users/John/Documents/GitHub/cdf-test-method/catalog_documents/NIST_V0_voter_records_interchange.xsd">
+		<xs:complexType name="ContactMethod">
+			<xs:complexContent>
+				<xs:restriction base="vri:ContactMethod">
+					<xs:sequence>
+						<xs:element name="Type" type="vri:ContactMethodType">
+							<xs:annotation>
+								<xs:documentation xml:lang="en">The contact method type, e.g. email or phone.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="Value">
+							<xs:annotation>
+								<xs:documentation xml:lang="en">The value of the ContactMethod. This will be the text value of the phone number, email address, or other mechanism. The values must be free of any formatting characters, such as parentheses or dashes for a phone number.</xs:documentation>
+							</xs:annotation>
+							<xs:simpleType>
+								<xs:restriction base="vri:Latin-1String">
+									<xs:minLength value="1"/>
+									<xs:maxLength value="100"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+					</xs:sequence>
+				</xs:restriction>
+			</xs:complexContent>
+		</xs:complexType>
+		<xs:complexType name="Image">
+			<xs:simpleContent>
+				<xs:restriction base="vri:Image">
+					<xs:attribute name="FileName" type="xs:string">
+						<xs:annotation>
+							<xs:documentation xml:lang="en">The filename.</xs:documentation>
+						</xs:annotation>
+					</xs:attribute>
+					<xs:attribute name="MimeType" use="required">
+						<xs:annotation>
+							<xs:documentation xml:lang="en">The MIME type associated with the file.</xs:documentation>
+						</xs:annotation>
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:enumeration value="image/jpeg"/>
+								<xs:enumeration value="image/png"/>
+								<xs:enumeration value="image/bmp"/>
+								<xs:enumeration value="image/gif"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:attribute>
+				</xs:restriction>
+			</xs:simpleContent>
+		</xs:complexType>
+		<xs:complexType name="Name">
+			<xs:complexContent>
+				<xs:restriction base="vri:Name">
+					<xs:sequence>
+						<xs:element name="FirstName">
+							<xs:annotation>
+								<xs:documentation xml:lang="en">Person’s first (given) name.</xs:documentation>
+							</xs:annotation>
+							<xs:simpleType>
+								<xs:restriction base="vri:Latin-1String">
+									<xs:minLength value="1"/>
+									<xs:maxLength value="50"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="LastName">
+							<xs:annotation>
+								<xs:documentation xml:lang="en">Person’s last (family) name.</xs:documentation>
+							</xs:annotation>
+							<xs:simpleType>
+								<xs:restriction base="vri:Latin-1String">
+									<xs:minLength value="1"/>
+									<xs:maxLength value="50"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="MiddleName" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation xml:lang="en">Person’s middle name.</xs:documentation>
+							</xs:annotation>
+							<xs:simpleType>
+								<xs:restriction base="vri:Latin-1String">
+									<xs:minLength value="1"/>
+									<xs:maxLength value="50"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="Prefix" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation xml:lang="en">A prefix associated with the person, e.g., Mr.</xs:documentation>
+							</xs:annotation>
+							<xs:simpleType>
+								<xs:restriction base="vri:Latin-1String">
+									<xs:minLength value="1"/>
+									<xs:maxLength value="15"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="Suffix" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation xml:lang="en">A suffix associated with the person, e.g., Jr.</xs:documentation>
+							</xs:annotation>
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:minLength value="1"/>
+									<xs:maxLength value="15"/>
+									<xs:enumeration value="JR"/>
+									<xs:enumeration value="SR"/>
+									<xs:enumeration value="I"/>
+									<xs:enumeration value="II"/>
+									<xs:enumeration value="III"/>
+									<xs:enumeration value="IV"/>
+									<xs:enumeration value="V"/>
+									<xs:enumeration value="VI"/>
+									<xs:enumeration value="VII"/>
+									<xs:enumeration value="VIII"/>
+									<xs:enumeration value="IX"/>
+									<xs:enumeration value="X"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+					</xs:sequence>
+				</xs:restriction>
+			</xs:complexContent>
+		</xs:complexType>
+		<xs:complexType name="Party">
+			<xs:complexContent>
+				<xs:restriction base="vri:Party">
+					<xs:sequence>
+						<xs:element name="Abbreviation" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation xml:lang="en">Short name for the party, e.g., “DEM”.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="Name">
+							<xs:annotation>
+								<xs:documentation xml:lang="en">Official full name of the party, e.g., “Republican”.</xs:documentation>
+							</xs:annotation>
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="Green"/>
+									<xs:enumeration value="Republican"/>
+									<xs:enumeration value="Democratic"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+					</xs:sequence>
+				</xs:restriction>
+			</xs:complexContent>
+		</xs:complexType>
+		<xs:complexType name="RequestHelper">
+			<xs:complexContent>
+				<xs:restriction base="vri:RequestHelper">
+					<xs:sequence>
+						<xs:element name="Address" minOccurs="0" type="vri:AddressFix">							
+						</xs:element>
+						<xs:element name="Name" type="vri:Name" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation xml:lang="en">To specify the name of the helper.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="Phone" type="vri:PhoneContactMethod" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation xml:lang="en">Request helper’s phone number.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="Signature" type="vri:Signature" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation xml:lang="en">To specify the signature of the helper.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="Type" type="vri:VoterHelperType" fixed="assistant">
+							<xs:annotation>
+								<xs:documentation xml:lang="en">To specify the type of helper, e.g., assistant.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:restriction>
+			</xs:complexContent>
+		</xs:complexType>
+		<xs:complexType name="RequestProxy">
+			<xs:complexContent>
+				<xs:restriction base="vri:RequestProxy">
+					<xs:sequence>
+						<xs:element name="Name" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation xml:lang="en">A name associated with the proxy.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="OriginTransactionId" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation xml:lang="en">An identifier associated with the transaction between the proxy and, e.g., the registration portal.</xs:documentation>
+								<xs:documentation source="usage">If available, the transaction ID in the source system. E.g., if a DMV transaction, the transaction number</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="OtherType" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation xml:lang="en">Used when OtherType value is other.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="TimeStamp" type="xs:date" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation xml:lang="en">The date of the request from the proxy.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="Type" type="vri:RequestProxyType">
+							<xs:annotation>
+								<xs:documentation xml:lang="en">The type of the requesting proxy, e.g., motor-vehicle-office, voter-via-email.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:restriction>
+			</xs:complexContent>
+		</xs:complexType>
+		<xs:complexType name="Signature">
+			<xs:complexContent>
+				<xs:restriction base="vri:Signature">
+					<xs:sequence>
+						<xs:element name="Date" type="xs:date">
+							<xs:annotation>
+								<xs:documentation xml:lang="en">The date of the signature, i.e., when created.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="FileValue" type="vri:Image">
+							<xs:annotation>
+								<xs:documentation xml:lang="en">The signature image in base 64 binary.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:restriction>
+			</xs:complexContent>
+		</xs:complexType>
+		<xs:complexType name="Voter">
+			<xs:complexContent>
+				<xs:restriction base="vri:Voter">
+					<xs:sequence>
+						<xs:element name="ContactMethod" type="vri:ContactMethod" minOccurs="0" maxOccurs="0">
+							<xs:annotation>
+								<xs:documentation xml:lang="en">How to contact the voter, listed in order of preference.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="DateOfBirth" type="xs:date" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation xml:lang="en">The voter’s data of birth in YYYY-MM-DD
+format.</xs:documentation>
+								<xs:documentation source="abc"/>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="MailingAddress" minOccurs="0" type="vri:AddressFix">
+							
+						</xs:element>
+						<xs:element name="Name" type="vri:Name">
+							<xs:annotation>
+								<xs:documentation xml:lang="en">Voter’s name.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="Party" type="vri:Party" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation xml:lang="en">Voter’s political party.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="PreviousName" type="vri:Name" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation xml:lang="en">A voter’s previous name.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="PreviousResidenceAddress" minOccurs="0" type="vri:AddressFix">
+						
+						</xs:element>
+						<xs:element name="ResidenceAddress" type="vri:AddressFix">
+						</xs:element>
+						<xs:element name="Signature" type="vri:Signature" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation xml:lang="en">Information about the voter signature on the registration form.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="VoterClassification" type="vri:VoterClassification" maxOccurs="unbounded">
+							<xs:annotation>
+								<xs:documentation xml:lang="en">How the voter is classified per assertions the voter has made on a registration form.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="VoterId" type="vri:VoterId" minOccurs="0" maxOccurs="unbounded">
+							<xs:annotation>
+								<xs:documentation xml:lang="en">Information to provide voter identity.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:restriction>
+			</xs:complexContent>
+		</xs:complexType>
+		<xs:complexType name="VoterId">
+			<xs:complexContent>
+				<xs:restriction base="vri:VoterId">
+					<xs:sequence>
+						<xs:element name="AttestNoSuchId" type="xs:boolean" fixed="true" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation xml:lang="en">Used to attest that the voter has no ID. Assumed to be false if not present.</xs:documentation>
+								<xs:documentation source="usage" xml:lang="en">Set when true, else omit property</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="DateOfIssuance" type="xs:date" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation xml:lang="en">Date the ID was issued.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="FileValue" type="vri:File" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation xml:lang="en">Used to include a file name for the ID.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="OtherType" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation xml:lang="en">Used when Type value is other.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="StringValue" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation xml:lang="en">Used to include the ID as a string.</xs:documentation>
+							</xs:annotation>
+							<xs:simpleType>
+								<xs:restriction base="vri:Latin-1String">
+									<xs:minLength value="1"/>
+									<xs:maxLength value="25"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="Type" type="vri:VoterIdType">
+							<xs:annotation>
+								<xs:documentation xml:lang="en">The type of voter ID.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:restriction>
+			</xs:complexContent>
+		</xs:complexType>
+		<xs:complexType name="VoterClassification">
+			<xs:complexContent>
+				<xs:restriction base="vri:VoterClassification">
+					<xs:sequence>
+						<xs:element name="Assertion" type="vri:AssertionValue">
+							<xs:annotation>
+								<xs:documentation xml:lang="en">A positive, negative, other or unknown assertion</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="OtherType" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation xml:lang="en">Used when Type value is other.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="Type" type="vri:VoterClassificationType">
+							<xs:annotation>
+								<xs:documentation xml:lang="en">A classification type, e.g., felon.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:restriction>
+			</xs:complexContent>
+		</xs:complexType>
+		<xs:complexType name="VoterRecordsRequest">
+			<xs:complexContent>
+				<xs:restriction base="vri:VoterRecordsRequest">
+					<xs:sequence>
+						<xs:element name="AdditionalInfo" type="vri:AdditionalInfo" minOccurs="0" maxOccurs="unbounded">
+							<xs:annotation>
+								<xs:documentation xml:lang="en">Used for including other information not specified by this model.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="Form" type="vri:RequestForm" fixed="other">
+							<xs:annotation>
+								<xs:documentation xml:lang="en">If the request is for a voter registration, the registration form used by the voter.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="GeneratedDate" type="xs:date">
+							<xs:annotation>
+								<xs:documentation xml:lang="en">The date that the voter records request was generated.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="Issuer" type="xs:string">
+							<xs:annotation>
+								<xs:documentation xml:lang="en">The name of the issuer of the voter records request transaction, e.g., State of West Virginia Voter Registration Portal.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="OtherForm" type="xs:string" fixed="NV-VRA" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation xml:lang="en">Used when Form value is other.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="OtherRequestMethod" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation xml:lang="en">Used when RequestMethod value is other.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="OtherType" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation xml:lang="en">Used when RequestType value is other.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="RequestMethod" type="vri:RequestMethod">
+							<xs:annotation>
+								<xs:documentation xml:lang="en">The method used by the voter to register.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="RequestProxy" type="vri:RequestProxy">
+							<xs:annotation>
+								<xs:documentation xml:lang="en">Included if the registration request is via a proxy, e.g., the DMV.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="SelectedLanguage" type="xs:language" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation xml:lang="en">The language specified by the voter, if any.</xs:documentation>
+								<xs:documentation source="usage">Affects interactive requests only. Set to a value from the legal list, otherwise omit.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="Subject" type="vri:Voter">
+							<xs:annotation>
+								<xs:documentation xml:lang="en">Specifies information about the voter who is the subject of the request.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="TransactionId" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation xml:lang="en">An identifier of the voter records request transaction.</xs:documentation>
+								<xs:documentation>HELLO MOM</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="Type" type="vri:VoterRequestType" fixed="registration" maxOccurs="unbounded">
+							<xs:annotation>
+								<xs:documentation xml:lang="en">The type of request, e.g., registration.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="VendorApplicationId" type="xs:string">
+							<xs:annotation>
+								<xs:documentation xml:lang="en">An identifier of the vendor application generating the voter registration request, e.g., X-VRDB Version 3.1.a.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:restriction>
+			</xs:complexContent>
+		</xs:complexType>
+		<xs:simpleType name="AssertionValue">
+			<xs:restriction base="vri:AssertionValue">
+				<xs:enumeration value="no">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">For a voter’s or third party’s assertion of “no” or “false”.</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="yes">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">For a voter’s or third party’s assertion of “yes” or “true”.</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+			</xs:restriction>
+		</xs:simpleType>
+		<xs:simpleType name="ContactMethodType">
+			<xs:restriction base="vri:ContactMethodType">
+				<xs:enumeration value="email">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">For electronic mail.</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="phone">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">For use of a phone.</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+			</xs:restriction>
+		</xs:simpleType>
+		<xs:simpleType name="PhoneCapability">
+			<xs:restriction base="vri:PhoneCapability">
+				<xs:enumeration value="mms">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">For telephones that contain Multimedia Messaging Service (MMS) capabilities.</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="sms">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">For telephones that contain Short Messaging Service (SMS) capabilities.</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="voice">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">For telephones that contain voice capabilities.</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+			</xs:restriction>
+		</xs:simpleType>
+		<xs:simpleType name="VoterHelperType">
+			<xs:restriction base="vri:VoterHelperType">
+				<xs:enumeration value="assistant">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">For a registration assistant.</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+			</xs:restriction>
+		</xs:simpleType>
+		<xs:simpleType name="VoterIdType">
+			<xs:restriction base="vri:VoterIdType">
+				<xs:enumeration value="drivers-license">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">Used for a driver’s license.</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="ssn4">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">Used for the last four digits of a Social Security number.</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="state-id">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">Used for a state ID that is not a state voter registration ID.</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+			</xs:restriction>
+		</xs:simpleType>
+		<xs:simpleType name="VoterClassificationType">
+			<xs:restriction base="vri:VoterClassificationType">
+				<xs:enumeration value="activated-national-guard">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">The voter is an activated National Guard member on State orders (FPCA).</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="active-duty">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">The voter is a member of the Uniformed Services or Merchant Marine on active duty (FPCA).</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="active-duty-spouse-or-dependent">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">The voter is an eligible spouse or dependent (FPCA).</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="citizen-abroad-intent-to-return">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">The voter is a US citizen residing outside the US and has intention to return (FPCA).</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="citizen-abroad-return-uncertain">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">The voter is a US citizen residing outside the US and their return is uncertain (FPCA).</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="citizen-abroad-never-resided">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">The voter is a US citizen and has never resided in the US (FPCA).</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="eighteen-on-election-day">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">The voter will be 18 on election day (NVRA).</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="protected-voter">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">The voter status is protected (NVRA).</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="united-states-citizen">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">The voter is a United States citizen (NVRA).</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="other">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">Used when the type of voter classification is not included in this enumeration.</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+			</xs:restriction>
+		</xs:simpleType>
+		<xs:simpleType name="RequestForm">
+			<xs:restriction base="vri:RequestForm">
+				<xs:enumeration value="other">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">Used when the type of form is not included in this enumeration.</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+			</xs:restriction>
+		</xs:simpleType>
+		<xs:simpleType name="VoterRequestType">
+			<xs:restriction base="vri:VoterRequestType">
+				<xs:enumeration value="registration">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">For a voter registration request.</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:redefine>
+	<xs:simpleType name="Latin-1String">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="(\p{IsBasicLatin}|\p{IsLatin-1Supplement})*"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>
