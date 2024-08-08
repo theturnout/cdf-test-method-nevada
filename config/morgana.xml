@@ -3,6 +3,7 @@
 	<path_to_SchXSLT_1>../schxslt/1.0</path_to_SchXSLT_1>
 	<path_to_SchXSLT_2>../schxslt/2.0</path_to_SchXSLT_2>		
 	<catalogs>./catalog.xml</catalogs>	
-	<xslt-connector>Saxon11</xslt-connector>
-	<xquery-connector>Saxon11</xquery-connector>
+	<xslt-connector>Saxon12-3</xslt-connector>
+	<xquery-connector>Saxon12-3</xquery-connector>
+	<xslt-config>./saxon-config.xml</xslt-config>
 </morgana-config>
