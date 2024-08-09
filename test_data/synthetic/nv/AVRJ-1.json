@@ -1,0 +1,11 @@
+{
+	"@type": "VRI.RequestRejection",
+	"TransactionId": "RA123456",
+	"Error": [
+		{
+			"@type": "VRI.Error",
+			"Name": "incomplete",
+			"Ref": "/Subject/Name/FirstName"
+		}
+	]
+}

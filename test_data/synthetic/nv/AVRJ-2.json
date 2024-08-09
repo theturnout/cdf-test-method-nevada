@@ -1,0 +1,11 @@
+{
+	"@type": "VRI.RequestRejection",
+	"TransactionId": "RA123457",
+	"Error": [
+		{
+			"@type": "VRI.Error",
+			"Name": "ineligible",
+			"Ref": "/Subject/DateOfBirth"
+		}
+	]
+}

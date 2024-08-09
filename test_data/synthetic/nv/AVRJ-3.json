@@ -1,0 +1,10 @@
+{
+	"@type": "VRI.RequestRejection",
+	"TransactionId": "RA123458",
+	"Error": [
+		{
+			"@type": "VRI.Error",
+			"Name": "invalid-form"					
+		}
+	]
+}

@@ -1,0 +1,146 @@
+{
+	"Type": [
+		"registration"
+	],
+	"@type": "VRI.VoterRecordsRequest",
+	"RequestProxy": {
+		"@type": "VRI.RequestProxy",
+		"Name": "Nevada Department of Motor Vehicles",
+		"OriginTransactionId": "DMVT-148091489014",
+		"TimeStamp": "2024-06-21",
+		"Type": "motor-vehicle-office"
+	},
+	"AdditionalInfo": [
+		{
+			"@type": "VRI.AdditionalInfo",
+			"Name": "place-of-birth",
+			"StringValue": "California"
+		}
+	],
+	"Subject": {
+		"Name": {
+			"@type": "VRI.Name",
+			"FirstName": "Jamie",
+			"MiddleName": [
+				"Ann"
+			],
+			"LastName": "Taylor"
+		},
+		"@type": "VRI.Voter",
+		"ResidenceAddress": {
+			"@type": "addr.NumberedThoroughfareAddress_type",
+			"CompleteAddressNumber": {
+				"@type": "addr_type.CompleteAddressNumber_type",
+				"AddressNumber": "789"
+			},
+			"CompleteStreetName": {
+				"@type": "addr_type.CompleteStreetName_type",
+				"StreetNamePreModifier": {
+					"@type": "addr_type.StreetNamePreModifier_type",
+					"Value": "N"
+				},
+				"StreetName": "6TH",
+				"StreetNamePostModifier": {
+					"@type": "addr_type.StreetNamePreModifier_type",
+					"Value": "ST"
+				}
+			},
+			"CompleteSubaddress": {
+				"@type": "addr_type.CompleteSubaddress_type",
+				"SubaddressElement": [
+					{
+						"@type": "addr_type.SubaddressElement_type",
+						"SubaddressIdentifier": "4",
+						"SubaddressType": "APT"
+					}
+				]
+			},
+			"CompletePlaceName1": {
+				"@type": "addr_type.CompletePlaceName_type",
+				"PlaceName": [
+					{
+						"@type": "addr_type.PlaceName_type",
+						"ElementSequenceNumber": 1,
+						"PlaceNameType": "USPSCommunity",
+						"Value": "RENO"
+					},
+					{
+						"@type": "addr_type.PlaceName_type",
+						"ElementSequenceNumber": 2,
+						"PlaceNameType": "County",
+						"Value": "Washoe"
+					}
+				]
+			},
+			"StateName": "Nevada",
+			"ZipCode": "89502"
+		},
+		"DateOfBirth": "2007-05-04",
+		"ContactMethod": [
+			{
+				"@type": "VRI.PhoneContactMethod",
+				"Type": "phone",
+				"Value": "7751112222",
+				"Capability": [
+					"sms"
+				]
+			},
+			{
+				"@type": "VRI.ContactMethod",
+				"Type": "email",
+				"Value": "jtaylor@testemail.com"
+			}
+		],
+		"VoterClassification": [
+			{
+				"@type": "VRI.VoterClassification",
+				"Assertion": "yes",
+				"Type": "united-states-citizen"
+			},
+			{
+				"@type": "VRI.VoterClassification",
+				"Assertion": "no",
+				"Type": "eighteen-on-election-day"
+			},
+			{
+				"@type": "VRI.VoterClassification",
+				"Assertion": "yes",
+				"Type": "other",
+				"OtherType": "preregister"
+			},
+			{
+				"@type": "VRI.VoterClassification",
+				"Assertion": "yes",
+				"Type": "other",
+				"OtherType": "nevada-resident"
+			},
+			{
+				"@type": "VRI.VoterClassification",
+				"Assertion": "no",
+				"Type": "other",
+				"OtherType": "imprisonment-felony"
+			}
+		],
+		"VoterId": [
+			{
+				"@type": "VRI.VoterId",
+				"Type": "ssn4",
+				"StringValue": "1111"
+			}
+		],
+		"Signature": {
+			"@type": "VRI.Signature",
+			"Date": "2024-06-07",
+			"FileValue": {
+				"@type": "VRI.Image",
+				"Data": "R0lGODlhZAAZAHAAACwAAAAAZAAZAIb///+mpqbh4eFERERXV1csLCywsLCXl5d4eHiysrIHBwcGBgZeXl7T09NcXFzHx8fb29sAAADx8fH8/Pzw8PDz8/O/v78QEBCbm5vLy8vl5eWampp/f3+Dg4Pn5+fj4+OPj48kJCQqKiq5ubmZmZl0dHTv7+9sbGxAQEBMTEwoKCjDw8NkZGSLi4v39/dYWFi6uro+Pj5gYGBQUFB8fHzPz8+fn5/X19ejo6P7+/vr6+uvr69UVFRwcHCzs7MEBAT09PSrq6scHBy7u7tISEg8PDyTk5NoaGg4ODgMDAynp6cwMDAgICCFhYVOTk59fX0UFBQtLS1nZ2ff39+Hh4e3t7eioqLd3d2+vr61tbUyMjJ7e3tKSkqtra0ICAjU1NRLS0vOzs4YGBj19fWYmJhjY2ORkZEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAH/4AAgoOEhYaHiImKi4yNjo+QkZKTlJWWl5iZmpuYAQKcoKGLAwSEBQaIBwiSCQoLDIMNDZsOD5oQERKCExEUhhUWFxgWFhmOGhGCG4IcHYcekh8gIcQWEJgiI4IkJYImJyjQICkqHOYrHSwtghUuAA0vFoMwMYoWJTIzNII1gjYsJgbdKOEAh4McOmiomGGuxYFBLG4I0iFoBw8PH3qw8HHohTMAP4AAoIEiCAchNIYQ+ZijiBETPyoAONKhhoMS1wYhkTHoAY9BNnoAqJFkCIAKF1bYOFJECb8ZLm4MmDFIyCwAHpII8hCBIoAlSkv0gMDkgY8CgowOauIEwBMcAP+GQHEH4IINJQVsAcCgwkWJF3EvGDmRw9CNKFIE+SAiaEoId1QifKjAQoXFkR+LVAGgAwoHf1AG7RggqIQQQQ8i7FgHwMERHSictVAryIoQC4kBlDjCT2vdKYJYIEmZ48aJJRcRXWGCBUALoTmmArBwIomFFx6YpADOgXeQmDNnOFtBpMigHp9XlEByNMWFE4NC8OhgbAeGQlkiaCkMIIgDQT04k0MSGejQQTqCWMCDCz8YYcgWAQHARRcAyHBADiVUh4AMEHhBQ2ERfAQCDyukoFUJFnTwghEyVIGWBT5YCEEPHzDRABEY/NCPIAPABYANnxXiAxRfDJLDCyywQFipaUnM4MEUSwywkgtTeCFTIQyAYUIYXgiCgxADZJCDDTXgQAQKguQgRoRTFCBDBUuIcd8NL4BwFBNM9DCmGANQJAMRDdhg3iA+hJDCAE45YsKVg0QoyAeEOErIGGSUYQYhXgGQARFKBAGYN4fkIOkgLjCaqZGMpgmNKJV4IAakNDzE6qyc1GCjD7zRqqsmD8y266/ABivssMQWa+yxyCar7LLMNuvss8oGAgA7",
+				"MimeType": "image/gif"
+			}
+		}
+	},
+	"VendorApplicationId": "DMV System 1",
+	"Form": "other",
+	"OtherForm": "NV-VRA",
+	"GeneratedDate": "2024-06-21",
+	"RequestMethod": "motor-vehicle-office"
+}

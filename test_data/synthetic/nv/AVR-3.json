@@ -1,0 +1,178 @@
+{
+	"Type": [
+		"registration"
+	],
+	"@type": "VRI.VoterRecordsRequest",
+	"RequestProxy": {
+		"@type": "VRI.RequestProxy",
+		"Name": "Nevada Department of Motor Vehicles",
+		"OriginTransactionId": "DMVT-148091489014",
+		"TimeStamp": "2024-06-21",
+		"Type": "motor-vehicle-office"
+	},
+	"Subject": {
+		"Name": {
+			"@type": "VRI.Name",
+			"FirstName": "Tammy",
+			"MiddleName": [
+				"Leigh"
+			],
+			"LastName": "Smith"
+		},
+		"@type": "VRI.Voter",
+		"PreviousName": {
+			"@type": "VRI.Name",
+			"FirstName": "Tammy",
+			"MiddleName": [
+				"Leigh"
+			],
+			"LastName": "Callaway"
+		},
+		"PreviousResidenceAddress": {
+			"@type": "addr.NumberedThoroughfareAddress_type",
+			"CompleteAddressNumber": {
+				"@type": "addr_type.CompleteAddressNumber_type",
+				"AddressNumber": "789"
+			},
+			"CompleteStreetName": {
+				"@type": "addr_type.CompleteStreetName_type",
+				"StreetNamePreModifier": {
+					"@type": "addr_type.StreetNamePreModifier_type",
+					"Value": "N"
+				},
+				"StreetName": "High",
+				"StreetNamePostModifier": {
+					"@type": "addr_type.StreetNamePreModifier_type",
+					"Value": "St"
+				}
+			},
+			"CompletePlaceName1": {
+				"@type": "addr_type.CompletePlaceName_type",
+				"PlaceName": [
+					{
+						"@type": "addr_type.PlaceName_type",
+						"ElementSequenceNumber": 1,
+						"PlaceNameType": "USPSCommunity",
+						"Value": "Columbus"
+					},
+					{
+						"@type": "addr_type.PlaceName_type",
+						"ElementSequenceNumber": 2,
+						"Value": "Franklin",
+						"PlaceNameType": "County"
+					}
+				]
+			},
+			"StateName": "Ohio",
+			"ZipCode": "43215"
+		},
+		"ResidenceAddress": {
+			"@type": "addr.NumberedThoroughfareAddress_type",
+			"CompleteAddressNumber": {
+				"@type": "addr_type.CompleteAddressNumber_type",
+				"AddressNumber": "123"
+			},
+			"CompleteStreetName": {
+				"@type": "addr_type.CompleteStreetName_type",
+				"StreetNamePreModifier": {
+					"@type": "addr_type.StreetNamePreModifier_type",
+					"Value": "N"
+				},
+				"StreetName": "Main",
+				"StreetNamePostModifier": {
+					"@type": "addr_type.StreetNamePreModifier_type",
+					"Value": "Ave"
+				}
+			},
+			"CompletePlaceName1": {
+				"@type": "addr_type.CompletePlaceName_type",
+				"PlaceName": [
+					{
+						"@type": "addr_type.PlaceName_type",
+						"ElementSequenceNumber": 1,
+						"PlaceNameType": "USPSCommunity",
+						"Value": "Reno"
+					},
+					{
+						"@type": "addr_type.PlaceName_type",
+						"ElementSequenceNumber": 2,
+						"PlaceNameType": "County",
+						"Value": "Washoe"
+					}
+				]
+			},
+			"StateName": "Nevada",
+			"ZipCode": "89501"
+		},
+		"MailingAddress": {
+			"@type": "addr.GeneralAddressClass_type",
+			"USPSGeneralDeliveryPoint": "456 Elm St",
+			"CompletePlaceName": {
+				"@type": "addr_type.CompletePlaceName_type",
+				"PlaceName": [
+					{
+						"@type": "addr_type.PlaceName_type",
+						"ElementSequenceNumber": 1,
+						"PlaceNameType": "USPSCommunity",
+						"Value": "Reno"
+					},
+					{
+						"@type": "addr_type.PlaceName_type",
+						"ElementSequenceNumber": 2,
+						"Value": "Washoe",
+						"PlaceNameType": "County"
+					}
+				]
+			},
+			"StateName": "Nevada",
+			"ZipCode": "89501"
+		},
+		"DateOfBirth": "1955-02-03",
+		"VoterClassification": [
+			{
+				"@type": "VRI.VoterClassification",
+				"Assertion": "yes",
+				"Type": "united-states-citizen"
+			},
+			{
+				"@type": "VRI.VoterClassification",
+				"Assertion": "yes",
+				"Type": "eighteen-on-election-day"
+			},
+			{
+				"@type": "VRI.VoterClassification",
+				"Assertion": "yes",
+				"Type": "other",
+				"OtherType": "nevada-resident"
+			},
+			{
+				"@type": "VRI.VoterClassification",
+				"Assertion": "no",
+				"Type": "other",
+				"OtherType": "imprisonment-felony"
+			}
+		],
+		"VoterId": [
+			{
+				"@type": "VRI.VoterId",
+				"Type": "drivers-license",
+				"StringValue": "1112223333"
+			}
+		],
+		"Signature": {
+			"@type": "VRI.Signature",
+			"Date": "2024-06-21",
+			"FileValue": {
+				"@type": "VRI.Image",
+				"Data": "iVBORw0KGgoAAAANSUhEUgAAAGQAAAAZCAMAAADwgHt5AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAE1UExURf///6ampuHh4URERFdXVywsLLCwsJeXl3h4eLKysgcHBwYGBl5eXtPT01xcXMfHx9vb2wAAAPHx8fz8/PDw8PPz87+/vxAQEJubm8vLy+Xl5Zqamn9/f4ODg+fn5+Pj44+PjyQkJCoqKrm5uZmZmXR0dO/v72xsbEBAQExMTCgoKMPDw2RkZIuLi/f391hYWLq6uj4+PmBgYFBQUHx8fM/Pz5+fn9fX16Ojo/v7++vr66+vr1RUVHBwcLOzswQEBPT09KurqxwcHLu7u0hISDw8PJOTk2hoaDg4OAwMDKenpzAwMCAgIIWFhU5OTn19fRQUFC0tLWdnZ9/f34eHh7e3t6Kiot3d3b6+vrW1tTIyMnt7e0pKSq2trQgICNTU1EtLS87OzhgYGPX19ZiYmGNjY5GRkTsfN60AAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJgSURBVEhL7ZJrc9JAFIZfjUjVcomaAJpwUcM1JBpCYCEJBQI0JSqK9W5VvPz/n+AJSTt17Ac/2Bk/8Mywew55d89lD3b8j1y5GhuXCXctXBPXtw6R3IuNc9y4eWuftlQqci8knYmNi8jyt4E7/N3IE8RcXhQLkXPKPR64D0hy7Bfj/RylckUUxWzs/cmDh8AjBajW6kWUG01Jklqy2qaAGlK6SIrHTyJliKgYHRPoApZaJb+npPtpNjCbHUlqJ+kPtQcMgKFdLDmquz1D6JTg6ABmfSxNzKlHHpvNqyMBC7mbVrbJHRq0ZGxaLAddfwoh17IWsyMK1tF6XIc+TKiVRZ9+PEVYtizFyQYZNwFMwwvw9Bme9zFdaUDOOkpQa/NNTdExzc1rbKtA78VLwPWAdUXDK74kqM2hDZPymR1jsJIo+IpkQw5QJpQOP6RGpBeDuox2FOT1RKQrlAWlRZnk1lTxoTllvdrSPmv+m+At2g4YJS3WfFEvBo01pAXGYcEdGS1vRipHQks5hNDI1cir2HIBw/z2PN7x7ynhcZpEMphfGMiySr23tdE8Enyg3n/8BCPJlJq/Z2RPTAaeqijbrYYPRZT1uXGcgOgayaxTClJefkRPBq5PBVKRW9zVZ1qZrqphdxS/U1wvOU/W1idCJNj/Uv16AvQnXIFZ3b5XJ/WGAq8ThrDc5NHTyxCCwGHWhhvA8FJWWBbcSoOjV/udanRnODIonVnEt+8/foY7vSgK3tFYp/30Gzs1tPB0qCBYdBO7YNT/huKmBDMc1MukG6RcmpBLJhOP5I4dO/4lwC8H2FN+ZMZXawAAAABJRU5ErkJggg==",
+				"MimeType": "image/png"
+			}
+		}
+	},
+	"SelectedLanguage": "es",
+	"VendorApplicationId": "DMV System 1",
+	"Form": "other",
+	"OtherForm": "NV-VRA",
+	"GeneratedDate": "2024-06-21",
+	"RequestMethod": "motor-vehicle-office"
+}

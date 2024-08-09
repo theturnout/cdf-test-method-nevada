@@ -1,0 +1,102 @@
+{
+	"Type": [
+		"registration"
+	],
+	"@type": "VRI.VoterRecordsRequest",
+	"RequestProxy": {
+		"@type": "VRI.RequestProxy",
+		"Name": "Nevada Department of Motor Vehicles",
+		"OriginTransactionId": "DMVT-148091489014",
+		"TimeStamp": "2024-06-21",
+		"Type": "motor-vehicle-office"
+	},
+	"Subject": {
+		"Name": {
+			"@type": "VRI.Name",
+			"FirstName": "Marcus",
+			"LastName": "Thompson",
+			"Suffix": "II"
+		},
+		"@type": "VRI.Voter",
+		"ResidenceAddress": {
+			"@type": "addr.NumberedThoroughfareAddress_type",
+			"CompleteAddressNumber": {
+				"@type": "addr_type.CompleteAddressNumber_type",
+				"AddressNumber": "172"
+			},
+			"CompleteStreetName": {
+				"@type": "addr_type.CompleteStreetName_type",
+				"StreetName": "Pine",
+				"StreetNamePostModifier": {
+					"@type": "addr_type.StreetNamePreModifier_type",
+					"Value": "Dr"
+				}
+			},
+			"CompletePlaceName1": {
+				"@type": "addr_type.CompletePlaceName_type",
+				"PlaceName": [
+					{
+						"@type": "addr_type.PlaceName_type",
+						"ElementSequenceNumber": 1,
+						"PlaceNameType": "USPSCommunity",
+						"Value": "Stateline"
+					},
+					{
+						"@type": "addr_type.PlaceName_type",
+						"ElementSequenceNumber": 2,
+						"PlaceNameType": "County",
+						"Value": "Douglas"
+					}
+				]
+			},
+			"StateName": "Nevada",
+			"ZipCode": "89449"
+		},
+		"DateOfBirth": "1990-05-06",
+		"VoterClassification": [
+			{
+				"@type": "VRI.VoterClassification",
+				"Assertion": "yes",
+				"Type": "united-states-citizen"
+			},
+			{
+				"@type": "VRI.VoterClassification",
+				"Assertion": "yes",
+				"Type": "eighteen-on-election-day"
+			},
+			{
+				"@type": "VRI.VoterClassification",
+				"Assertion": "yes",
+				"Type": "other",
+				"OtherType": "nevada-resident"
+			},
+			{
+				"@type": "VRI.VoterClassification",
+				"Assertion": "no",
+				"Type": "other",
+				"OtherType": "imprisonment-felony"
+			}
+		],
+		"VoterId": [
+			{
+				"@type": "VRI.VoterId",
+				"Type": "drivers-license",
+				"StringValue": "1112223333"
+			}
+		],
+		"Signature": {
+			"@type": "VRI.Signature",
+			"Date": "2024-06-07",
+			"FileValue": {
+				"@type": "VRI.Image",
+				"Data": "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",
+				"MimeType": "image/jpeg"
+			}
+		}
+	},
+	"VendorApplicationId": "DMV System 1",
+	"Form": "other",
+	"OtherForm": "NV-VRA",
+	"GeneratedDate": "2024-06-21",
+	"RequestMethod": "motor-vehicle-office"
+}

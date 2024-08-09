@@ -1,0 +1,134 @@
+{
+	"Type": [
+		"registration"
+	],
+	"@type": "VRI.VoterRecordsRequest",
+	"RequestProxy": {
+		"@type": "VRI.RequestProxy",
+		"Name": "Silver State Health Insurance Exchange",
+		"OriginTransactionId": "SS-KR456123LL",
+		"TimeStamp": "2024-07-03",
+		"Type": "other-agency-designated-by-state",
+		"OtherType": "health-exchange"
+	},
+	"Subject": {
+		"Name": {
+			"@type": "VRI.Name",
+			"FirstName": "Hermenegildo",
+			"MiddleName": [
+				"Coral"
+			],
+			"LastName": "Hidde"
+		},
+		"@type": "VRI.Voter",
+		"ResidenceAddress": {
+			"@type": "addr.NumberedThoroughfareAddress_type",
+			"CompleteAddressNumber": {
+				"@type": "addr_type.CompleteAddressNumber_type",
+				"AddressNumber": "1590"
+			},
+			"CompleteStreetName": {
+				"@type": "addr_type.CompleteStreetName_type",
+				"StreetName": "Franklin",
+				"StreetNamePostModifier": {
+					"@type": "addr_type.StreetNamePreModifier_type",
+					"Value": "Ave"
+				}
+			},
+			"CompletePlaceName1": {
+				"@type": "addr_type.CompletePlaceName_type",
+				"PlaceName": [
+					{
+						"@type": "addr_type.PlaceName_type",
+						"ElementSequenceNumber": 1,
+						"Value": "Lovelock",
+						"PlaceNameType": "USPSCommunity"
+					},
+					{
+						"@type": "addr_type.PlaceName_type",
+						"ElementSequenceNumber": 2,
+						"PlaceNameType": "County",
+						"Value": "Pershing"
+					}
+				]
+			},
+			"StateName": "Nevada",
+			"ZipCode": "89501"
+		},
+		"MailingAddress": {
+			"@type": "addr.GeneralAddressClass_type",
+			"USPSGeneralDeliveryPoint": "CMR 567 BOX 5051",
+			"CompletePlaceName": {
+				"@type": "addr_type.CompletePlaceName_type",
+				"PlaceName": [
+					{
+						"@type": "addr_type.PlaceName_type",
+						"Value": "APO"
+					}
+				]
+			},
+			"StateName": "AE",
+			"ZipCode": "09096"
+		},
+		"DateOfBirth": "1955-02-03",
+		"ContactMethod": [
+			{
+				"@type": "VRI.PhoneContactMethod",
+				"Type": "phone",
+				"Value": "7753334444"
+			},
+			{
+				"@type": "VRI.ContactMethod",
+				"Type": "email",
+				"Value": "coralh@testemail.com"
+			}
+		],
+		"VoterClassification": [
+			{
+				"@type": "VRI.VoterClassification",
+				"Assertion": "yes",
+				"Type": "united-states-citizen"
+			},
+			{
+				"@type": "VRI.VoterClassification",
+				"Assertion": "yes",
+				"Type": "eighteen-on-election-day"
+			},
+			{
+				"@type": "VRI.VoterClassification",
+				"Assertion": "yes",
+				"Type": "other",
+				"OtherType": "nevada-resident"
+			},
+			{
+				"@type": "VRI.VoterClassification",
+				"Assertion": "no",
+				"Type": "other",
+				"OtherType": "imprisonment-felony"
+			},
+			{
+				"@type": "VRI.VoterClassification",
+				"Assertion": "yes",
+				"Type": "active-duty"
+			}
+		],
+		"VoterId": [
+			{
+				"@type": "VRI.VoterId",
+				"AttestNoSuchId": false,
+				"Type": "drivers-license"
+			},
+			{
+				"@type": "VRI.VoterId",
+				"AttestNoSuchId": false,
+				"Type": "ssn4"
+			}
+		]
+	},
+	"VendorApplicationId": "NV Stateline AVR Integration 1.3",
+	"Form": "other",
+	"OtherForm": "NV-VRA",
+	"GeneratedDate": "2024-06-21",
+	"RequestMethod": "other-agency-designated-by-state",
+	"OtherRequestMethod": "health-exchange"
+}
