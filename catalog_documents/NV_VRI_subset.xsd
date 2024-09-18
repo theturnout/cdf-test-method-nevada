@@ -153,8 +153,7 @@
 			<xs:complexContent>
 				<xs:restriction base="vri:RequestHelper">
 					<xs:sequence>
-						<xs:element name="Address" minOccurs="0" type="vri:AddressFix">							
-						</xs:element>
+						<xs:element name="Address" type="vri:AddressFix" minOccurs="0"/>
 						<xs:element name="Name" type="vri:Name" minOccurs="0">
 							<xs:annotation>
 								<xs:documentation xml:lang="en">To specify the name of the helper.</xs:documentation>
@@ -235,7 +234,7 @@
 			<xs:complexContent>
 				<xs:restriction base="vri:Voter">
 					<xs:sequence>
-						<xs:element name="ContactMethod" type="vri:ContactMethod" minOccurs="0" maxOccurs="0">
+						<xs:element name="ContactMethod" type="vri:ContactMethod" minOccurs="0" maxOccurs="unbounded">
 							<xs:annotation>
 								<xs:documentation xml:lang="en">How to contact the voter, listed in order of preference.</xs:documentation>
 							</xs:annotation>
@@ -247,15 +246,13 @@ format.</xs:documentation>
 								<xs:documentation source="abc"/>
 							</xs:annotation>
 						</xs:element>
-						<xs:element name="MailingAddress" minOccurs="0" type="vri:AddressFix">
-							
-						</xs:element>
+						<xs:element name="MailingAddress" type="vri:AddressFix" minOccurs="0"/>
 						<xs:element name="Name" type="vri:Name">
 							<xs:annotation>
 								<xs:documentation xml:lang="en">Voter’s name.</xs:documentation>
 							</xs:annotation>
 						</xs:element>
-						<xs:element name="Party" type="vri:Party" minOccurs="0">
+						<xs:element name="Party" type="vri:Party" minOccurs="0" maxOccurs="0">
 							<xs:annotation>
 								<xs:documentation xml:lang="en">Voter’s political party.</xs:documentation>
 							</xs:annotation>
@@ -265,11 +262,8 @@ format.</xs:documentation>
 								<xs:documentation xml:lang="en">A voter’s previous name.</xs:documentation>
 							</xs:annotation>
 						</xs:element>
-						<xs:element name="PreviousResidenceAddress" minOccurs="0" type="vri:AddressFix">
-						
-						</xs:element>
-						<xs:element name="ResidenceAddress" type="vri:AddressFix">
-						</xs:element>
+						<xs:element name="PreviousResidenceAddress" type="vri:AddressFix" minOccurs="0"/>
+						<xs:element name="ResidenceAddress" type="vri:AddressFix"/>
 						<xs:element name="Signature" type="vri:Signature" minOccurs="0">
 							<xs:annotation>
 								<xs:documentation xml:lang="en">Information about the voter signature on the registration form.</xs:documentation>
@@ -376,12 +370,12 @@ format.</xs:documentation>
 								<xs:documentation xml:lang="en">The date that the voter records request was generated.</xs:documentation>
 							</xs:annotation>
 						</xs:element>
-						<xs:element name="Issuer" type="xs:string">
+						<xs:element name="Issuer" type="xs:string" minOccurs="0">
 							<xs:annotation>
 								<xs:documentation xml:lang="en">The name of the issuer of the voter records request transaction, e.g., State of West Virginia Voter Registration Portal.</xs:documentation>
 							</xs:annotation>
 						</xs:element>
-						<xs:element name="OtherForm" type="xs:string" fixed="NV-VRA" minOccurs="0">
+						<xs:element name="OtherForm" type="xs:string" fixed="NV-AVR" minOccurs="0">
 							<xs:annotation>
 								<xs:documentation xml:lang="en">Used when Form value is other.</xs:documentation>
 							</xs:annotation>
