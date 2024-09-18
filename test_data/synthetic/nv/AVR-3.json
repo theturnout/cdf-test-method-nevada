@@ -10,6 +10,12 @@
 		"TimeStamp": "2024-06-21",
 		"Type": "motor-vehicle-office"
 	},
+	"AdditionalInfo": [
+		{
+			"@type": "VRI.AdditionalInfo",
+			"Name": " receive-large-type-ballot",
+			"StringValue": "yes"
+		}],
 	"Subject": {
 		"Name": {
 			"@type": "VRI.Name",
@@ -36,8 +42,8 @@
 			},
 			"CompleteStreetName": {
 				"@type": "addr_type.CompleteStreetName_type",
-				"StreetNamePreModifier": {
-					"@type": "addr_type.StreetNamePreModifier_type",
+				"StreetNamePreDirectional": {
+					"@type": "addr_type.StreetNamePreDirectional_type",
 					"Value": "N"
 				},
 				"StreetName": "High",
@@ -74,8 +80,8 @@
 			},
 			"CompleteStreetName": {
 				"@type": "addr_type.CompleteStreetName_type",
-				"StreetNamePreModifier": {
-					"@type": "addr_type.StreetNamePreModifier_type",
+				"StreetNamePreDirectional": {
+					"@type": "addr_type.StreetNamePreDirectional_type",
 					"Value": "N"
 				},
 				"StreetName": "Main",
@@ -106,7 +112,7 @@
 		},
 		"MailingAddress": {
 			"@type": "addr.GeneralAddressClass_type",
-			"USPSGeneralDeliveryPoint": "456 Elm St",
+			"USPSGeneralDeliveryPoint": "456 Elm St\nAPT 3",
 			"CompletePlaceName": {
 				"@type": "addr_type.CompletePlaceName_type",
 				"PlaceName": [
@@ -172,7 +178,7 @@
 	"SelectedLanguage": "es",
 	"VendorApplicationId": "DMV System 1",
 	"Form": "other",
-	"OtherForm": "NV-VRA",
+	"OtherForm": "NV-AVR",
 	"GeneratedDate": "2024-06-21",
 	"RequestMethod": "motor-vehicle-office"
 }

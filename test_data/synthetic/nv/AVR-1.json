@@ -10,6 +10,18 @@
 		"TimeStamp": "2024-06-21",
 		"Type": "motor-vehicle-office"
 	},
+	"AdditionalInfo": [
+		{
+			"@type": "VRI.AdditionalInfo",
+			"Name": " receive-large-type-ballot",
+			"StringValue": "yes"
+		},
+			{
+			"@type": "VRI.AdditionalInfo",
+			"Name": " printed-language-preference",
+			"StringValue": "es"
+		}
+	],
 	"Subject": {
 		"Name": {
 			"@type": "VRI.Name",
@@ -96,7 +108,7 @@
 	},
 	"VendorApplicationId": "DMV System 1",
 	"Form": "other",
-	"OtherForm": "NV-VRA",
+	"OtherForm": "NV-AVR",
 	"GeneratedDate": "2024-06-21",
 	"RequestMethod": "motor-vehicle-office"
 }

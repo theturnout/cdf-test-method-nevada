@@ -12,7 +12,7 @@ The NV SOS has developed several examples for AVR. Each cover a different scenar
 - `AVR-4` contains a military voter example
 
 | Top             | Scenarios                         | AVR-1     | AVR-2     | AVR-3     | AVR-4        |
-|-----------------|-----------------------------------|-----------|-----------|-----------|--------------|
+|----------------|----------------------------------|-----------|-----------|-----------|--------------|
 | Geoaddress      | Mailing Address - In Country      |           |           | X         |              |
 |                 | Mailing Address - Out of Country  |           |           |           | X            |
 |                 | Physical Address - Secondary Unit |           | X         |           |              |
@@ -23,14 +23,12 @@ The NV SOS has developed several examples for AVR. Each cover a different scenar
 |                 | No ID                             |           |           |           | X            |
 | Contact Info    | Telephone                         |           | X/SMS     |           | X            |
 |                 | Email                             |           | X         |           | X            |
-|                 | Helper                            | N/A       | N/A       | N/A       | N/A          |
 |                 | Place of Birth                    |           | X         |           |              |
 | Other Fields    | Previous Registered Location      |           |           | X         |              |
 |                 | Previous Name                     |           |           | X         |              |
-|                 | Larger type ballot                |           |           | X         |              |
+|                 | Printed Language  Preference      | X         |           | X         |              |
+|                 | Larger type ballot                | X         |           | X         |              |
 |                 | Language                          |           |           | Spanish   |              |
-|                 | Agency                            | DMV       | DMV       | DMV       |              |
-|                 | Party Affiliation                 | N/A       | N/A       | N/A       | N/A          |
 |                 | Signature                         | image/jpg | image/gif | image/png |              |
 | AVR Specific    | Agency                            | DMV       | DMV       | DMV       | Silver State |
 

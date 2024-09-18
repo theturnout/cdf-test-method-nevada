@@ -35,8 +35,8 @@
 			},
 			"CompleteStreetName": {
 				"@type": "addr_type.CompleteStreetName_type",
-				"StreetNamePreModifier": {
-					"@type": "addr_type.StreetNamePreModifier_type",
+				"StreetNamePreDirectional": {
+					"@type": "addr_type.StreetNamePreDirectional_type",
 					"Value": "N"
 				},
 				"StreetName": "6TH",
@@ -140,7 +140,7 @@
 	},
 	"VendorApplicationId": "DMV System 1",
 	"Form": "other",
-	"OtherForm": "NV-VRA",
+	"OtherForm": "NV-AVR",
 	"GeneratedDate": "2024-06-21",
 	"RequestMethod": "motor-vehicle-office"
 }
