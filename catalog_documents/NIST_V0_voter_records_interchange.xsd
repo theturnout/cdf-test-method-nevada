@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns="http://itl.nist.gov/ns/voting/1500-102/v1" xmlns:addr="http://www.fgdc.gov/schemas/address/addr" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://itl.nist.gov/ns/voting/1500-102/v1" elementFormDefault="qualified" version="1.0.3">
 	<!-- ========== Imports ========== -->
-	<xsd:import namespace="http://www.fgdc.gov/schemas/address/addr" schemaLocation="https://www.fgdc.gov/schemas/address/addr.xsd"/>
+	<xsd:import namespace="http://www.fgdc.gov/schemas/address/addr" schemaLocation="addr.xsd"/>
 	<xsd:import namespace="http://www.w3.org/2000/09/xmldsig#" schemaLocation="http://www.w3.org/2000/09/xmldsig#"/>
 	<!-- ========== Roots ========== -->
 	<xsd:element name="VoterRecordsRequest" type="VoterRecordsRequest"/>

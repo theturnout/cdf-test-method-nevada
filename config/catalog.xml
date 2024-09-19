@@ -9,6 +9,15 @@
     <uri name="http://nvsos.gov/ns/vri/json" uri="../catalog_documents/NIST_V0_voter_records_interchange.json"/>        
     <uri name="http://itl.nist.gov/ns/voting/1500-102/v1" uri="../catalog_documents/NIST_V0_voter_records_interchange.xsd"/>        
     <uri name="http://itl.nist.gov/ns/voting/1500-102/v1/json" uri="../catalog_documents/NIST_V0_voter_records_interchange.json"/>        
+    <!-- begin workaround -->
+    <uri name="http://itl.nist.gov/ns/voting/1500-102/addr.xsd" uri="../catalog_documents/addr.xsd" />
+    <uri name="http://itl.nist.gov/ns/voting/1500-102/addr_type.xsd" uri="../catalog_documents/addr_type.xsd" />
+    <uri name="http://itl.nist.gov/ns/voting/1500-102/geometryPrimitives.xsd" uri="../catalog_documents/geometryPrimitives.xsd" />
+    <uri name="http://itl.nist.gov/ns/voting/1500-102/xlink.xsd" uri="../catalog_documents/xlink.xsd" />
+    <uri name="http://itl.nist.gov/ns/voting/1500-102/smil20.xsd" uri="../catalog_documents/smil20.xsd" />
+    <uri name="http://itl.nist.gov/ns/voting/1500-102/smil20-language.xsd" uri="../catalog_documents/smil20-language.xsd" />
+    <uri name="http://itl.nist.gov/ns/voting/1500-102/xml.xsd" uri="../catalog_documents/xml.xsd" />
+    <!-- end workaround -->
     <!-- FGDC and formats used by it (e.g. GML) -->
     <uri name="http://www.w3.org/XML/1998/namespace" uri="../catalog_documents/xml.xsd" />
     <uri name="http://www.w3.org/2000/09/xmldsig#" uri="../catalog_documents/xmldsig-core-schema.xsd" />
