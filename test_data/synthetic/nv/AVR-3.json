@@ -15,7 +15,8 @@
 			"@type": "VRI.AdditionalInfo",
 			"Name": " receive-large-type-ballot",
 			"StringValue": "yes"
-		}],
+		}
+	],
 	"Subject": {
 		"Name": {
 			"@type": "VRI.Name",

@@ -115,12 +115,12 @@
 		"VoterId": [
 			{
 				"@type": "VRI.VoterId",
-				"AttestNoSuchId": false,
+				"AttestNoSuchId": true,
 				"Type": "drivers-license"
 			},
 			{
 				"@type": "VRI.VoterId",
-				"AttestNoSuchId": false,
+				"AttestNoSuchId": true,
 				"Type": "ssn4"
 			}
 		]
