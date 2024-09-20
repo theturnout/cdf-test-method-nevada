@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration xmlns="http://saxon.sf.net/ns/configuration" edition="HE">
+	<!--<global 
+    schemaValidation="lax"
+    /> -->
+	<!--<xslt
+        schemaAware="true"
+    >
+    </xslt>-->
+	<!--<xsd version="1.0"></xsd>-->
+</configuration>
