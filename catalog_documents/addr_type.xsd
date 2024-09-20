@@ -621,9 +621,7 @@ A word, phrase, or symbol used as a separator between components of a complex el
 				military addresses).
 			</xsd:documentation>
 		</xsd:annotation>
-		<xsd:restriction base="xsd:string">
-			<xsd:pattern value=".*"/>
-		</xsd:restriction>
+		<xsd:restriction base="xsd:string" />
 	</xsd:simpleType>
 	<xsd:simpleType name="AddressAuthorityIdentifiertype_old">
 		<xsd:annotation>
