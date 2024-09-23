@@ -23,8 +23,8 @@
     <uri name="http://www.w3.org/2000/09/xmldsig#" uri="../catalog_documents/xmldsig-core-schema.xsd" />
     <uri name="http://www.fgdc.gov/schemas/address/addr" uri="../catalog_documents/addr.xsd" />    
     <uri name="http://www.fgdc.gov/schemas/address/addr_type" uri="../catalog_documents/addr_type.xsd" />
-    <uri name="https://www.fgdc.gov/schemas/addresses/addr" uri="../catalog_documents/addr.xsd" />
-    <uri name="https://www.fgdc.gov/schemas/addresses/addr_type" uri="../catalog_documents/addr_type.xsd" />
+    <uri name="https://www.fgdc.gov/schemas/address/addr.xsd" uri="../catalog_documents/addr.xsd" />
+    <uri name="https://www.fgdc.gov/schemas/address/addr_type.xsd" uri="../catalog_documents/addr_type.xsd" />
     <uri name="http://www.opengis.net/gml" uri="../catalog_documents/geometryPrimitives.xsd" />
     <uri name="http://www.w3.org/1999/xlink" uri="../catalog_documents/xlink.xsd" />
     <uri name="http://www.w3.org/2001/SMIL20/" uri="../catalog_documents/smil20.xsd" />
