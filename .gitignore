@@ -5,6 +5,8 @@ MorganaXProc*/
 xml-calabash*/
 Xerces*/
 SaxonHE*/
+SaxonEE*/
+*.jar
 # BUILD SCRIPTS AND OUTPUT
 build/
 third_party_licenses/
@@ -13,3 +15,4 @@ build-no-tests.bat
 # UNCOMMENT WHEN TESTS ARE READY
 tests/
 rwd*
+swagger.yaml
