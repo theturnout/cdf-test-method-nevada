@@ -16,6 +16,14 @@
     <uri name="http://www.fgdc.gov/schemas/address/addr_type" uri="../catalog_documents/addr_type.xsd" />
     <uri name="https://www.fgdc.gov/schemas/address/addr.xsd" uri="../catalog_documents/addr.xsd" />
     <uri name="https://www.fgdc.gov/schemas/address/addr_type.xsd" uri="../catalog_documents/addr_type.xsd" />
+    <!-- workaround for flattened GML -->
+    <uri name="http://schemas.opengis.net/gml/3.1.1/base/gml.xsd" uri="../catalog_documents/geometryPrimitives.xsd" />
+    <uri name="http://schemas.opengis.net/gml/3.1.1/base/xlink.xsd" uri="../catalog_documents/xlink.xsd" />
+    <uri name="http://schemas.opengis.net/gml/3.1.1/base/smil20.xsd" uri="../catalog_documents/smil20.xsd" />
+    <uri name="http://schemas.opengis.net/gml/3.1.1/base/smil20-language.xsd" uri="../catalog_documents/smil20-language.xsd" />
+    <uri name="http://schemas.opengis.net/gml/3.1.1/base/xml.xsd" uri="../catalog_documents/xml.xsd" />
+    <!-- end workaround -->
+    <uri name="http://www.w3.org/2001/SMIL20/Language" uri="../catalog_documents/smil20-language.xsd" />
     <uri name="http://www.opengis.net/gml" uri="../catalog_documents/geometryPrimitives.xsd" />
     <uri name="http://www.w3.org/1999/xlink" uri="../catalog_documents/xlink.xsd" />
     <uri name="http://www.w3.org/2001/SMIL20/" uri="../catalog_documents/smil20.xsd" />

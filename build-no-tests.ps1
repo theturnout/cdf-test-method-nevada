@@ -9,6 +9,7 @@ $LIB = Join-Path $BUILD "libraries"
 $SCHXSLT = Join-Path $BUILD "schxslt"
 $TEST = Join-Path $BUILD "tests"
 
+
 # Write-Host $BUILD
 if (-not (Test-Path -Path $BUILD)) {
     New-Item -ItemType Directory -Path $BUILD
@@ -18,6 +19,7 @@ $MORGANADIR = Join-Path $PSScriptRoot "MorganaXProc-IIIse-1.4"
 $LIB_PATH = Join-Path $MORGANADIR "MorganaXProc-IIIse_lib"
 $XERCES_PATH = Join-Path $PSScriptRoot "xerces-2_12_2-xml-schema-1.1"
 $SAXON_PATH = Join-Path $PSScriptRoot "SaxonHE12-5J"
+$XMLRESOLVER_PATH = Join-Path $PSScriptRoot "xmlresolver-6.0.10"
 
 Copy-Item -Path "$MORGANADIR\*.jar" -Destination $BUILD
 # Remove-Item is the PowerShell equivalent to REM for deleting files, uncomment if needed
@@ -27,6 +29,10 @@ Copy-Item "$LIB_PATH\*.jar" -Destination $LIB
 Copy-Item "$XERCES_PATH\*.jar" -Destination $LIB
 Copy-Item "$SAXON_PATH\*.jar" -Destination $LIB
 Copy-Item "$SAXON_PATH\lib\*.jar" -Destination $LIB
+
+# Workaround for XMLResolver issue
+Remove-Item -Path "$LIB\xmlresolver-*" 
+Copy-Item "$XMLRESOLVER_PATH\lib\*.jar" -Destination $LIB
 
 Write-Host "COPYING SCHXSLT"
 New-Item -ItemType Directory -Path $SCHXSLT
